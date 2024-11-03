@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
         rewards.append(r)
 
-    print("Average reward = ", np.mean(rewards), "over", n_epochs)
+    print("Average reward = ", np.mean(rewards), "over", n_epochs, "epochs.")
 
     # plot the rewards in function of epochs
 
