@@ -49,7 +49,7 @@ def epsilon_greedy(Q, s, epsilone):
 
 
 if __name__ == "__main__":
-    env = gym.make("Taxi-v3", render_mode="human")
+    env = gym.make("Taxi-v3", render_mode="ansi")
 
     env.reset()
     env.render()
@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
     epsilon = 0.6 # choose your own exploration rate
 
-    n_epochs = 15 # choose your own number of epochs
+    n_epochs = 20000 # choose your own number of epochs
     max_itr_per_epoch = 100 # choose your own number of iterations per epoch
     rewards = []
 
@@ -96,9 +96,9 @@ if __name__ == "__main__":
 
     # plot the rewards in function of epochs
 
-    epoch_number = np.array(len(rewards))
+    epoch_number = []
     for i in range(len(rewards)):
-        epoch_number.put(i)
+        epoch_number.append(i)
 
     plt.figure()
     plt.plot(epoch_number, rewards, color="k", label='Rewards in function of epochs')
